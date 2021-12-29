@@ -1,0 +1,7 @@
+INFILE=F:\Project\Modulo3_FPGA\Clase2\Gpio\implementation\system.ncd
+OUTFILE=F:\Project\Modulo3_FPGA\Clase2\Gpio\implementation\system.bit
+FAMILY=Spartan6
+PART=xc6slx9-2csg225
+WORKINGDIR=F:\Project\Modulo3_FPGA\Clase2\Gpio\implementation
+LICENSE=WebPack
+USER_INFO=__0_0_0

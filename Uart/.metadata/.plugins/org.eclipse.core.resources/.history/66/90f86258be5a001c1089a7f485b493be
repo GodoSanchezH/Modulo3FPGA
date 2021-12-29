@@ -1,0 +1,50 @@
+/**
+ * Modulo 3 FPGA
+ *
+ */
+
+
+//LIbrerias del ANSI C
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include <math.h>
+//Librerias del Micro Blaze
+#include <xparameters.h> //Libreria de los paremtros y direcciones de Memoria
+#include <xgpio.h>
+#include <xuartlite.h>
+
+
+
+
+
+XGpio LEDS,SW;
+XUartLite RS232;
+u32 i,j;
+u8 data;
+void Ejemplo1(void);
+u8 buffer_tx[50]= "Especilizacion en FPGAS MODULO 3\n\r";
+
+int main()
+{
+
+	XGpio_Initialize(&LEDS,XPAR_LEDS_DEVICE_ID);//	Inicializamos Leds
+	XUartLite_Initialize(&RS232,XPAR_UARTLITE_1_DEVICE_ID);
+
+
+	for(;;){
+
+		XUartLite_Send(&RS232,buffer_tx,50);
+		Ejemplo1();
+
+	}
+
+
+    return 0;
+}
+void Ejemplo1(void){
+			XGpio_DiscreteWrite(&LEDS,1,0xAA);
+			for(i=0;i<=1000000;i++);
+			XGpio_DiscreteWrite(&LEDS,1,0x55);
+			for(i=0;i<=1000000;i++);
+}

@@ -1,0 +1,24 @@
+/**
+ * Modulo 3 FPGA
+ *
+ */
+
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+
+
+int main()
+{
+
+
+	for(;;){
+
+
+
+
+	}
+
+
+    return 0;
+}

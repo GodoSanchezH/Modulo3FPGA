@@ -1,0 +1,38 @@
+15:46:59 **** Auto Build of configuration Debug for project uart ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../uart_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:17:27: warning: extra tokens at end of #include directive [enabled by default]
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:50:3: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+e:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/string.h:35:9: note: expected 'const char *' but argument is of type 'u8 *'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: uart.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../uart_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "uart.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: uart.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size uart.elf  |tee "uart.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6442	    412	   2378	   9232	   2410	uart.elf
+'Finished building: uart.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck uart.elf -hw ../../Uart_hw_platform/system.xml -pe microblaze_0  |tee "uart.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Uart_hw_platform/system.xml -pe microblaze_0
+uart.elf 
+
+ELF file	: uart.elf
+elfcheck passed.
+'Finished building: uart.elf.elfcheck'
+' '
+
+15:47:01 Build Finished (took 2s.222ms)
+

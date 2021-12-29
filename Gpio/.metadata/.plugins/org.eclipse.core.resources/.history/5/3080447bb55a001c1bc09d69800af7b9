@@ -1,0 +1,69 @@
+/**
+ * Modulo 3 FPGA
+ *
+ */
+
+
+//LIbrerias del ANSI C
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include <math.h>
+//Librerias del Micro Blaze
+#include <xparameters.h> //Libreria de los paremtros y direcciones de Memoria
+#include <xgpio.h>
+
+XGpio LEDS,SW;
+u32 i,j;
+u8 data;
+void Ejemplo1(void);
+void Ejemplo2(void);
+void Ejemplo3(void);
+
+int main()
+{
+
+	XGpio_Initialize(&LEDS,XPAR_LEDS_DEVICE_ID);//	Inicializamos Leds
+	XGpio_Initialize(&SW,XPAR_DIP_SWITCHES_DEVICE_ID);//Inicializamos SW
+
+
+	for(;;){
+
+		data = XGpio_DiscreteRead(&SW,1);
+		XGpio_DiscreteWrite(&LEDS,data);
+
+	}
+
+
+    return 0;
+}
+void Ejemplo1(void){
+			XGpio_DiscreteWrite(&LEDS,1,0xAA);
+			for(i=0;i<=1000000;i++);
+			XGpio_DiscreteWrite(&LEDS,1,0x55);
+			for(i=0;i<=1000000;i++);
+}
+void Ejemplo2(void){
+
+	for(i=0;i<=255;i++){
+		XGpio_DiscreteWrite(&LEDS,1,i);
+		for(j=0;j<=500000;j++);
+	}
+	for(i=255;i>=0;i--){
+		XGpio_DiscreteWrite(&LEDS,1,i);
+		for(j=0;j<=500000;j++);
+	}
+
+
+}
+void Ejemplo3(void){
+	for(i=0;i<=7;i++){
+				XGpio_DiscreteWrite(&LEDS,1,pow(2,i));
+				for(j=0;j<=1000000;j++);
+			}
+			for(i=7;i>=0;i--){
+				XGpio_DiscreteWrite(&LEDS,1,pow(2,i));
+				for(j=0;j<=1000000;j++);
+			}
+
+}

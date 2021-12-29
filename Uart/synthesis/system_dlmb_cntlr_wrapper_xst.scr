@@ -1,0 +1,14 @@
+set -tmpdir F:\Project\Modulo3_FPGA\Clase2\Uart\synthesis\xst_temp_dir\
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc6slx9csg225-2
+-top system_dlmb_cntlr_wrapper
+-ifmt MIXED
+-ifn system_dlmb_cntlr_wrapper_xst.prj
+-ofn ../implementation/system_dlmb_cntlr_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"F:\Project\Modulo3_FPGA\Clase2\Uart\pcores\" "E:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "E:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
