@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+
+  XIntc intc;
+
+int main() 
+{
+
+
+
+   
+   
+   for(;;){
+
+
+
+   }
+
+   return 0;
+}
+

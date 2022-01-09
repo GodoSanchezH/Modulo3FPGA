@@ -1,0 +1,620 @@
+Release 14.7 Xflow P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+xflow.exe -wd implementation -p xc6slx9csg225-2 -implement xflow.opt system.ngc 
+ 
+PMSPEC -- Overriding Xilinx file
+<E:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<E:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+.... Copying flowfile E:/Xilinx/14.7/ISE_DS/ISE/xilinx/data/fpga.flw into
+working directory E:/Project/Modulo3_FPGA/Clase3/IIC/implementation 
+
+Using Flow File: E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/fpga.flw 
+Using Option File(s): 
+ E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/xflow.opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc6slx9csg225-2 -nt timestamp -bm system.bmm
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system.ngc" -uc system.ucf
+system.ngd 
+#----------------------------------------------#
+Release 14.7 - ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+<E:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<E:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+
+Command Line: E:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -p
+xc6slx9csg225-2 -nt timestamp -bm system.bmm
+E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system.ngc -uc system.ucf
+system.ngd
+
+Reading NGO file "E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system.ngc"
+...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_clock_generator_0_wrap
+per.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_proc_sys_reset_0_wrapp
+er.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_microblaze_0_wrapper.n
+gc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_mb_plb_wrapper.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_ilmb_wrapper.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_dlmb_wrapper.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_dlmb_cntlr_wrapper.ngc
+"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_ilmb_cntlr_wrapper.ngc
+"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_generic_iic_bus_wrappe
+r.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_leds_wrapper.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_mdm_0_wrapper.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_xps_intc_0_wrapper.ngc
+"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_lmb_bram_wrapper.ngc".
+..
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "system.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0" TS_sys_clk_pin
+   HIGH 50%>
+
+Done...
+
+Processing BMM file "system.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.
+   Gen_Bits[27].MEM_EX_Result_Inst' has unconnected output pin
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   1
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion: 2 min  35 sec
+Total CPU time to NGDBUILD completion:  1 min  2 sec
+
+Writing NGDBUILD log file "system.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o system_map.ncd -w -pr b -ol high -timing -detail system.ngd system.pcf 
+#----------------------------------------------#
+Release 14.7 - Map P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+<E:/Xilinx/14.7/ISE_DS/EDK/data/Xdh_PrimTypeLib.xda> with local file
+<E:/Xilinx/14.7/ISE_DS/ISE/data/Xdh_PrimTypeLib.xda>
+Using target part "6slx9csg225-2".
+Mapping design into LUTs...
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 1 mins 26 secs 
+Total CPU  time at the beginning of Placer: 30 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:ec785745) REAL time: 1 mins 35 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:ec785745) REAL time: 1 mins 37 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:6e0e1195) REAL time: 1 mins 37 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:9713d8f8) REAL time: 2 mins 10 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:9713d8f8) REAL time: 2 mins 10 secs 
+
+Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:9713d8f8) REAL time: 2 mins 10 secs 
+
+Phase 7.3  Local Placement Optimization
+Phase 7.3  Local Placement Optimization (Checksum:9713d8f8) REAL time: 2 mins 11 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:9713d8f8) REAL time: 2 mins 11 secs 
+
+Phase 9.8  Global Placement
+...........................
+.........................................................................................
+...............................................................................................................................................
+.......................................................................................................................................
+.......................................................................
+Phase 9.8  Global Placement (Checksum:bacf3051) REAL time: 6 mins 5 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:bacf3051) REAL time: 6 mins 5 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:662f687b) REAL time: 7 mins 28 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:662f687b) REAL time: 7 mins 28 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:d353057a) REAL time: 7 mins 29 secs 
+
+Total REAL time to Placer completion: 7 mins 31 secs 
+Total CPU  time to Placer completion: 2 mins 8 secs 
+Running post-placement packing...
+Writing output files...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   18
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,859 out of  11,440   16%
+    Number used as Flip Flops:               1,852
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                7
+  Number of Slice LUTs:                      2,165 out of   5,720   37%
+    Number used as logic:                    1,971 out of   5,720   34%
+      Number using O6 output only:           1,531
+      Number using O5 output only:              43
+      Number using O5 and O6:                  397
+      Number used as ROM:                        0
+    Number used as Memory:                     146 out of   1,440   10%
+      Number used as Dual Port RAM:             64
+        Number using O6 output only:             0
+        Number using O5 output only:             0
+        Number using O5 and O6:                 64
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            82
+        Number using O6 output only:            23
+        Number using O5 output only:             1
+        Number using O5 and O6:                 58
+    Number used exclusively as route-thrus:     48
+      Number with same-slice register load:     42
+      Number with same-slice carry load:         6
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   900 out of   1,430   62%
+  Number of MUXCYs used:                       320 out of   2,860   11%
+  Number of LUT Flip Flop pairs used:        2,680
+    Number with an unused Flip Flop:           923 out of   2,680   34%
+    Number with an unused LUT:                 515 out of   2,680   19%
+    Number of fully used LUT-FF pairs:       1,242 out of   2,680   46%
+    Number of unique control sets:             136
+    Number of slice register sites lost
+      to control set restrictions:             512 out of  11,440    4%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        12 out of     160    7%
+    Number of LOCed IOBs:                       12 out of      12  100%
+    IOB Flip Flops:                              8
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        32 out of      32  100%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   8 out of     200    4%
+    Number used as OLOGIC2s:                     8
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              1 out of       4   25%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            3 out of      16   18%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.13
+
+Peak Memory Usage:  4559 MB
+Total REAL time to MAP completion:  7 mins 57 secs 
+Total CPU time to MAP completion:   2 mins 15 secs 
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol high system_map.ncd system.ncd system.pcf 
+#----------------------------------------------#
+Release 14.7 - par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <E:/Xilinx/14.7/ISE_DS/EDK/data/parBmgr.acd> with local file
+<E:/Xilinx/14.7/ISE_DS/ISE/data/parBmgr.acd>
+
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '6slx9.nph' in environment
+E:\Xilinx\14.7\ISE_DS\ISE\;E:\Xilinx\14.7\ISE_DS\EDK.
+   "system" is an NCD, version 3.2, device xc6slx9, package csg225, speed -2
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,859 out of  11,440   16%
+    Number used as Flip Flops:               1,852
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                7
+  Number of Slice LUTs:                      2,165 out of   5,720   37%
+    Number used as logic:                    1,971 out of   5,720   34%
+      Number using O6 output only:           1,531
+      Number using O5 output only:              43
+      Number using O5 and O6:                  397
+      Number used as ROM:                        0
+    Number used as Memory:                     146 out of   1,440   10%
+      Number used as Dual Port RAM:             64
+        Number using O6 output only:             0
+        Number using O5 output only:             0
+        Number using O5 and O6:                 64
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            82
+        Number using O6 output only:            23
+        Number using O5 output only:             1
+        Number using O5 and O6:                 58
+    Number used exclusively as route-thrus:     48
+      Number with same-slice register load:     42
+      Number with same-slice carry load:         6
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   900 out of   1,430   62%
+  Number of MUXCYs used:                       320 out of   2,860   11%
+  Number of LUT Flip Flop pairs used:        2,680
+    Number with an unused Flip Flop:           923 out of   2,680   34%
+    Number with an unused LUT:                 515 out of   2,680   19%
+    Number of fully used LUT-FF pairs:       1,242 out of   2,680   46%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  11,440    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        12 out of     160    7%
+    Number of LOCed IOBs:                       12 out of      12  100%
+    IOB Flip Flops:                              8
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        32 out of      32  100%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   8 out of     200    4%
+    Number used as OLOGIC2s:                     8
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              1 out of       4   25%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            3 out of      16   18%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 51 secs 
+Finished initial Timing Analysis.  REAL time: 52 secs 
+
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[10].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[0].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[5].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[4].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[11].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[12].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[8].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[7].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[14].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[9].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[3].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[6].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal dlmb_LMB_ABus<30> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[13].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[15].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal dlmb_LMB_ABus<31> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[1].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Register_File_I/Using_LUT6.All_RAM32M[2].ram32m_i_RAMD_D1_O has no
+   load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 17790 unrouted;      REAL time: 54 secs 
+
+Phase  2  : 13358 unrouted;      REAL time: 57 secs 
+
+Phase  3  : 5794 unrouted;      REAL time: 2 mins 57 secs 
+
+Phase  4  : 5794 unrouted; (Setup:0, Hold:763, Component Switching Limit:0)     REAL time: 3 mins 3 secs 
+
+Updating file: system.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:575, Component Switching Limit:0)     REAL time: 4 mins 27 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:575, Component Switching Limit:0)     REAL time: 4 mins 27 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:575, Component Switching Limit:0)     REAL time: 4 mins 27 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:575, Component Switching Limit:0)     REAL time: 4 mins 27 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 mins 32 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 mins 47 secs 
+Total REAL time to Router completion: 4 mins 47 secs 
+Total CPU time to Router completion: 1 mins 11 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|      clk_50_0000MHz |  BUFGMUX_X2Y3| No   |  814 |  0.748     |  2.139      |
++---------------------+--------------+------+------+------------+-------------+
+|microblaze_0_mdm_bus |              |      |      |            |             |
+|            _Dbg_Clk | BUFGMUX_X3Y13| No   |   60 |  0.112     |  1.504      |
++---------------------+--------------+------+------+------------+-------------+
+|microblaze_0_mdm_bus |              |      |      |            |             |
+|         _Dbg_Update |         Local|      |   21 |  1.483     |  3.171      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Number of Timing Constraints that were not applied: 1
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |     9.346ns|    10.654ns|       0|           0
+  G_PLL0_CLKOUT0 = PERIOD TIMEGRP         " | HOLD        |     0.297ns|            |       0|           0
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT0" TS_sys_clk_pin         HIGH  |             |            |            |        |            
+  50%                                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |    15.000ns|     5.000ns|       0|           0
+  pin" 50 MHz HIGH 50%                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     20.000ns|      5.000ns|     10.654ns|            0|            0|            0|       367935|
+| TS_clock_generator_0_clock_gen|     20.000ns|     10.654ns|          N/A|            0|            0|       367935|            0|
+| erator_0_SIG_PLL0_CLKOUT0     |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 18 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 4 mins 58 secs 
+Total CPU time to PAR completion: 1 mins 16 secs 
+
+Peak Memory Usage:  4486 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 20
+Number of info messages: 0
+
+Writing design to file system.ncd
+
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml system.twx system.ncd system.pcf 
+#----------------------------------------------#
+Release 14.7 - Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+
+PMSPEC -- Overriding Xilinx file
+<E:/Xilinx/14.7/ISE_DS/EDK/spartan6/data/spartan6.acd> with local file
+<E:/Xilinx/14.7/ISE_DS/ISE/spartan6/data/spartan6.acd>
+Loading device for application Rf_Device from file '6slx9.nph' in environment
+E:\Xilinx\14.7\ISE_DS\ISE\;E:\Xilinx\14.7\ISE_DS\EDK.
+   "system" is an NCD, version 3.2, device xc6slx9, package csg225, speed -2
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+E:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -e 3 -xml system.twx
+system.ncd system.pcf
+
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc6slx9,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths option. All paths that are not constrained will be reported in
+   the unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on a 50 Ohm transmission line loading model.  For the details of
+   this model, and for more information on accounting for different loading conditions, please see the device datasheet.
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0 (Setup/Max: 0, Hold: 0)
+
+Constraints cover 367935 paths, 0 nets, and 13331 connections
+
+Design statistics:
+   Minimum period:  10.654ns (Maximum frequency:  93.861MHz)
+
+
+Analysis completed Sun Jan 09 17:03:32 2022
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Number of info messages: 3
+Total time: 54 secs 
+
+

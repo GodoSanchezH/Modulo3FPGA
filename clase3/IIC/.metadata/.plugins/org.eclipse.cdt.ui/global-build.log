@@ -1,0 +1,370 @@
+17:10:55 **** Build of project IIC_bsp ****
+make -k all 
+libgen -hw ../IIC_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../IIC_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling standalone
+Compiling bram
+Compiling iic
+Compiling gpio
+Compiling uartlite
+Compiling intc
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+17:13:26 **** Build of configuration Debug for project IIC ****
+make all 
+Building file: ../src/testperiph.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+Finished building: ../src/testperiph.c
+ 
+Building file: ../src/xgpio_tapp_example.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.d" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
+../src/xgpio_tapp_example.c: In function 'GpioOutputExample':
+../src/xgpio_tapp_example.c:182:6: warning: unused variable 'Data' [-Wunused-variable]
+Finished building: ../src/xgpio_tapp_example.c
+ 
+Building file: ../src/xiic_selftest_example.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xiic_selftest_example.d" -MT"src/xiic_selftest_example.d" -o "src/xiic_selftest_example.o" "../src/xiic_selftest_example.c"
+Finished building: ../src/xiic_selftest_example.c
+ 
+Building file: ../src/xintc_tapp_example.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xintc_tapp_example.d" -MT"src/xintc_tapp_example.d" -o "src/xintc_tapp_example.o" "../src/xintc_tapp_example.c"
+Finished building: ../src/xintc_tapp_example.c
+ 
+Building target: IIC.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../IIC_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "IIC.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xiic_selftest_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: IIC.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size IIC.elf  |tee "IIC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7486	    344	   2384	  10214	   27e6	IIC.elf
+Finished building: IIC.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck IIC.elf -hw ../../IIC_hw_platform/system.xml -pe microblaze_0  |tee "IIC.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../IIC_hw_platform/system.xml -pe microblaze_0
+IIC.elf 
+
+ELF file	: IIC.elf
+elfcheck passed.
+Finished building: IIC.elf.elfcheck
+ 
+17:14:31 **** Auto Build of configuration Debug for project IIC ****
+make all 
+Building file: ../src/testperiph.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+Finished building: ../src/testperiph.c
+ 
+Building target: IIC.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../IIC_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "IIC.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xiic_selftest_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: IIC.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size IIC.elf  |tee "IIC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7486	    344	   2384	  10214	   27e6	IIC.elf
+Finished building: IIC.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck IIC.elf -hw ../../IIC_hw_platform/system.xml -pe microblaze_0  |tee "IIC.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../IIC_hw_platform/system.xml -pe microblaze_0
+IIC.elf 
+
+ELF file	: IIC.elf
+elfcheck passed.
+Finished building: IIC.elf.elfcheck
+ 
+17:24:09 **** Auto Build of configuration Debug for project IIC ****
+make all 
+Building file: ../src/testperiph.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:6:3: error: unknown type name 'XIntc'
+make: *** [src/testperiph.o] Error 1
+17:24:23 **** Auto Build of configuration Debug for project IIC ****
+make all 
+Building file: ../src/testperiph.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+Finished building: ../src/testperiph.c
+ 
+Building target: IIC.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../IIC_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "IIC.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xiic_selftest_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: IIC.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size IIC.elf  |tee "IIC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1990	    308	   2084	   4382	   111e	IIC.elf
+Finished building: IIC.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck IIC.elf -hw ../../IIC_hw_platform/system.xml -pe microblaze_0  |tee "IIC.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../IIC_hw_platform/system.xml -pe microblaze_0
+IIC.elf 
+
+ELF file	: IIC.elf
+elfcheck passed.
+Finished building: IIC.elf.elfcheck
+ 
+17:26:15 **** Incremental Build of configuration Debug for project IIC ****
+make all 
+make: No se hace nada para `all'.
+17:35:56 **** Auto Build of configuration Debug for project IIC ****
+make all 
+Building file: ../src/testperiph.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+Finished building: ../src/testperiph.c
+ 
+Building target: IIC.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../IIC_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "IIC.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xiic_selftest_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: IIC.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size IIC.elf  |tee "IIC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1990	    308	   2084	   4382	   111e	IIC.elf
+Finished building: IIC.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck IIC.elf -hw ../../IIC_hw_platform/system.xml -pe microblaze_0  |tee "IIC.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../IIC_hw_platform/system.xml -pe microblaze_0
+IIC.elf 
+
+ELF file	: IIC.elf
+elfcheck passed.
+Finished building: IIC.elf.elfcheck
+ 
+17:45:33 **** Auto Build of configuration Debug for project IIC ****
+make all 
+Building file: ../src/testperiph.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:31:9: error: 'i' undeclared (first use in this function)
+../src/testperiph.c:31:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/testperiph.o] Error 1
+17:45:58 **** Auto Build of configuration Debug for project IIC ****
+make all 
+Building file: ../src/testperiph.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+Finished building: ../src/testperiph.c
+ 
+Building target: IIC.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../IIC_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "IIC.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xiic_selftest_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: IIC.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size IIC.elf  |tee "IIC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3594	    328	   2214	   6136	   17f8	IIC.elf
+Finished building: IIC.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck IIC.elf -hw ../../IIC_hw_platform/system.xml -pe microblaze_0  |tee "IIC.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../IIC_hw_platform/system.xml -pe microblaze_0
+IIC.elf 
+
+ELF file	: IIC.elf
+elfcheck passed.
+Finished building: IIC.elf.elfcheck
+ 
+17:49:07 **** Auto Build of configuration Debug for project IIC ****
+make all 
+Building file: ../src/testperiph.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:31:3: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [enabled by default]
+e:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/string.h:34:9: note: expected 'const char *' but argument is of type 'u8'
+../src/testperiph.c:31:3: warning: passing argument 2 of 'XIic_MasterSend' makes pointer from integer without a cast [enabled by default]
+../../IIC_bsp/microblaze_0/include/xiic.h:529:5: note: expected 'u8 *' but argument is of type 'u8'
+Finished building: ../src/testperiph.c
+ 
+Building target: IIC.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../IIC_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "IIC.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xiic_selftest_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: IIC.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size IIC.elf  |tee "IIC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5382	    340	   2212	   7934	   1efe	IIC.elf
+Finished building: IIC.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck IIC.elf -hw ../../IIC_hw_platform/system.xml -pe microblaze_0  |tee "IIC.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../IIC_hw_platform/system.xml -pe microblaze_0
+IIC.elf 
+
+ELF file	: IIC.elf
+elfcheck passed.
+Finished building: IIC.elf.elfcheck
+ 
+17:51:37 **** Auto Build of configuration Debug for project IIC ****
+make all 
+Building file: ../src/testperiph.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:29:3: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [enabled by default]
+e:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/string.h:34:9: note: expected 'const char *' but argument is of type 'u8'
+../src/testperiph.c:29:3: warning: passing argument 2 of 'XIic_MasterSend' makes pointer from integer without a cast [enabled by default]
+../../IIC_bsp/microblaze_0/include/xiic.h:529:5: note: expected 'u8 *' but argument is of type 'u8'
+Finished building: ../src/testperiph.c
+ 
+Building target: IIC.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../IIC_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "IIC.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xiic_selftest_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: IIC.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size IIC.elf  |tee "IIC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5382	    340	   2212	   7934	   1efe	IIC.elf
+Finished building: IIC.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck IIC.elf -hw ../../IIC_hw_platform/system.xml -pe microblaze_0  |tee "IIC.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../IIC_hw_platform/system.xml -pe microblaze_0
+IIC.elf 
+
+ELF file	: IIC.elf
+elfcheck passed.
+Finished building: IIC.elf.elfcheck
+ 
+17:52:03 **** Auto Build of configuration Debug for project IIC ****
+make all 
+Building file: ../src/testperiph.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:16:16: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:29:3: warning: passing argument 1 of 'strlen' from incompatible pointer type [enabled by default]
+e:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/string.h:34:9: note: expected 'const char *' but argument is of type 'u8 **'
+../src/testperiph.c:29:3: warning: passing argument 2 of 'XIic_MasterSend' from incompatible pointer type [enabled by default]
+../../IIC_bsp/microblaze_0/include/xiic.h:529:5: note: expected 'u8 *' but argument is of type 'u8 **'
+Finished building: ../src/testperiph.c
+ 
+Building target: IIC.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../IIC_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "IIC.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xiic_selftest_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: IIC.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size IIC.elf  |tee "IIC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5366	    340	   2212	   7918	   1eee	IIC.elf
+Finished building: IIC.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck IIC.elf -hw ../../IIC_hw_platform/system.xml -pe microblaze_0  |tee "IIC.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../IIC_hw_platform/system.xml -pe microblaze_0
+IIC.elf 
+
+ELF file	: IIC.elf
+elfcheck passed.
+Finished building: IIC.elf.elfcheck
+ 
+18:05:13 **** Auto Build of configuration Debug for project IIC ****
+make all 
+Building file: ../src/testperiph.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../IIC_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.d" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:16:16: warning: initialization makes pointer from integer without a cast [enabled by default]
+Finished building: ../src/testperiph.c
+ 
+Building target: IIC.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../IIC_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "IIC.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xiic_selftest_example.o ./src/xintc_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: IIC.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size IIC.elf  |tee "IIC.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3594	    328	   2214	   6136	   17f8	IIC.elf
+Finished building: IIC.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck IIC.elf -hw ../../IIC_hw_platform/system.xml -pe microblaze_0  |tee "IIC.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../IIC_hw_platform/system.xml -pe microblaze_0
+IIC.elf 
+
+ELF file	: IIC.elf
+elfcheck passed.
+Finished building: IIC.elf.elfcheck
+ 

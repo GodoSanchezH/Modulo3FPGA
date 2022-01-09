@@ -1,0 +1,7 @@
+INFILE=E:\Project\Modulo3_FPGA\Clase3\IIC\implementation\system.ncd
+OUTFILE=E:\Project\Modulo3_FPGA\Clase3\IIC\implementation\system.bit
+FAMILY=Spartan6
+PART=xc6slx9-2csg225
+WORKINGDIR=E:\Project\Modulo3_FPGA\Clase3\IIC\implementation
+LICENSE=WebPack
+USER_INFO=212166420_0_0_425

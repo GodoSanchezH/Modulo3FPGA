@@ -1,0 +1,85 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: E:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -p
+xc6slx9csg225-2 -nt timestamp -bm system.bmm
+E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system.ngc -uc system.ucf
+system.ngd
+
+Reading NGO file "E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system.ngc"
+...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_clock_generator_0_wrap
+per.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_proc_sys_reset_0_wrapp
+er.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_microblaze_0_wrapper.n
+gc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_mb_plb_wrapper.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_ilmb_wrapper.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_dlmb_wrapper.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_dlmb_cntlr_wrapper.ngc
+"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_ilmb_cntlr_wrapper.ngc
+"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_generic_iic_bus_wrappe
+r.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_leds_wrapper.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_mdm_0_wrapper.ngc"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_xps_intc_0_wrapper.ngc
+"...
+Loading design module
+"E:/Project/Modulo3_FPGA/Clase3/IIC/implementation/system_lmb_bram_wrapper.ngc".
+..
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "system.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0" TS_sys_clk_pin
+   HIGH 50%>
+
+Done...
+
+Processing BMM file "system.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/Using_FPGA.
+   Gen_Bits[27].MEM_EX_Result_Inst' has unconnected output pin
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   1
+
+Total memory usage is 4442252 kilobytes
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion: 2 min  35 sec
+Total CPU time to NGDBUILD completion:  1 min  2 sec
+
+Writing NGDBUILD log file "system.bld"...
