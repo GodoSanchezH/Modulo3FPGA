@@ -1,0 +1,101 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect -24 168 144 184)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "clk" (rect 5 0 20 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect -40 208 136 224)
+	(text "OUTPUT" (rect 137 6 175 16)(font "Arial" (font_size 6)))
+	(text "portd[7..0]" (rect 5 4 56 16)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 176 8)(pt 124 8))
+		(line (pt 124 12)(pt 98 12))
+		(line (pt 124 4)(pt 98 4))
+		(line (pt 124 4)(pt 124 12))
+		(line (pt 98 12)(pt 94 8))
+		(line (pt 94 8)(pt 98 4))
+		(line (pt 98 4)(pt 94 8))
+	)
+	(rotate180)
+)
+(symbol
+	(rect 240 104 704 248)
+	(text "unsaved" (rect 209 -1 264 15)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 128 25 140)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 41 75)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 208 72))
+	)
+	(port
+		(pt 0 112)
+		(output)
+		(text "portd_external_connection_export[7..0]" (rect 0 0 224 14)(font "Arial" (font_size 8)))
+		(text "portd_external_connection_export[7..0]" (rect 4 101 228 115)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 208 112)(line_width 3))
+	)
+	(drawing
+		(text "clk" (rect 193 43 210 58)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 213 67 227 79)(font "Arial" (color 0 0 0)))
+		(text "portd_external_connection" (rect 56 83 227 98)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 213 107 243 119)(font "Arial" (color 0 0 0)))
+		(text " unsaved " (rect 425 128 474 140)(font "Arial" ))
+		(line (pt 208 32)(pt 256 32))
+		(line (pt 256 32)(pt 256 128))
+		(line (pt 208 128)(pt 256 128))
+		(line (pt 208 32)(pt 208 128))
+		(line (pt 209 52)(pt 209 76))
+		(line (pt 210 52)(pt 210 76))
+		(line (pt 209 92)(pt 209 116))
+		(line (pt 210 92)(pt 210 116))
+		(line (pt 0 0)(pt 464 0))
+		(line (pt 464 0)(pt 464 144))
+		(line (pt 0 144)(pt 464 144))
+		(line (pt 0 0)(pt 0 144))
+	)
+)
+(connector
+	(pt 144 176)
+	(pt 240 176)
+)
+(connector
+	(pt 136 216)
+	(pt 240 216)
+	(bus)
+)

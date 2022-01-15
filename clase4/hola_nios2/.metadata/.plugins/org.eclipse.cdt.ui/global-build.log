@@ -1,0 +1,14 @@
+16:53:39 **** Incremental Build of configuration Nios II for project hola ****
+make all 
+Info: Building ../hola_bsp/
+E:/QUARTUSPRIME/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hola_bsp/
+[BSP build complete]
+Info: Linking hola.elf
+nios2-elf-g++  -T'../hola_bsp//linker.x' -msys-crt0='../hola_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../hola_bsp/  -msmallc  -Wl,-Map=hola.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o hola.elf obj/default/hello_world.o -lm -msys-lib=m
+e:/quartusprime/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: address 0x872c of hola.elf section `.bss' is not within region `memory'
+e:/quartusprime/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: address 0x872c of hola.elf section `.bss' is not within region `memory'
+collect2.exe: error: ld returned 1 exit status
+make: *** [hola.elf] Error 1
+16:53:48 **** Incremental Build of configuration Nios II for project hola_bsp ****
+make all 
+[BSP build complete]

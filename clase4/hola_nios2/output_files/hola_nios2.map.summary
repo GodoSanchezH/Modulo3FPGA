@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Jan 15 16:23:41 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : hola_nios2
+Top-level Entity Name : hola_nios2
+Family : Cyclone IV E
+Total logic elements : 1,745
+    Total combinational functions : 1,553
+    Dedicated logic registers : 925
+Total registers : 925
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 131,264
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
