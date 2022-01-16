@@ -1,0 +1,18 @@
+17:07:25 **** Incremental Build of configuration Nios II for project gpio ****
+make all 
+Info: Building ../gpio_bsp/
+E:/QUARTUSPRIME/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../gpio_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../gpio_bsp//HAL/inc -I../gpio_bsp/ -I../gpio_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking gpio.elf
+nios2-elf-g++  -T'../gpio_bsp//linker.x' -msys-crt0='../gpio_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../gpio_bsp/  -msmallc  -Wl,-Map=gpio.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o gpio.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert gpio.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x11050 --timestamp 1642365129 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name unsaved --quartus_project_dir "E:/Project/Modulo3_FPGA/Clase4/GPIO_Nios" --jdi ../..//output_files/GPIO_Nios.jdi --sopcinfo E:/Project/Modulo3_FPGA/Clase4/GPIO_Nios/software/gpio_bsp/../../unsaved.sopcinfo
+Info: (gpio.elf) 14 KBytes program size (code + initialized data).
+Info:            10 KBytes free for stack + heap.
+Info: Creating gpio.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source gpio.elf >gpio.objdump
+[gpio build complete]
+
+17:07:55 Build Finished (took 29s.837ms)
+

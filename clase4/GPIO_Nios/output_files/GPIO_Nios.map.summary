@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Jan 16 16:08:26 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : GPIO_Nios
+Top-level Entity Name : GPIO_Nios
+Family : Cyclone IV E
+Total logic elements : 1,800
+    Total combinational functions : 1,603
+    Dedicated logic registers : 944
+Total registers : 944
+Total pins : 11
+Total virtual pins : 0
+Total memory bits : 251,264
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

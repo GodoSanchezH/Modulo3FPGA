@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Jan 16 16:10:55 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : GPIO_Nios
+Top-level Entity Name : GPIO_Nios
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 1,728 / 22,320 ( 8 % )
+    Total combinational functions : 1,607 / 22,320 ( 7 % )
+    Dedicated logic registers : 936 / 22,320 ( 4 % )
+Total registers : 936
+Total pins : 11 / 154 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 251,264 / 608,256 ( 41 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
