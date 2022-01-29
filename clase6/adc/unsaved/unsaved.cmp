@@ -1,0 +1,11 @@
+	component unsaved is
+		port (
+			adc_external_interface_sclk     : out std_logic;                           -- sclk
+			adc_external_interface_cs_n     : out std_logic;                           -- cs_n
+			adc_external_interface_dout     : in  std_logic                    := 'X'; -- dout
+			adc_external_interface_din      : out std_logic;                           -- din
+			clk_clk                         : in  std_logic                    := 'X'; -- clk
+			leds_external_connection_export : out std_logic_vector(7 downto 0)         -- export
+		);
+	end component unsaved;
+
