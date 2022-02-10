@@ -1,0 +1,83 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 656 192)
+	(text "unsaved" (rect 305 -1 339 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 176 20 188)(font "Arial" ))
+	(port
+		(pt 0 120)
+		(input)
+		(text "accelerometer_external_interface_G_SENSOR_INT" (rect 0 0 214 12)(font "Arial" (font_size 8)))
+		(text "accelerometer_external_interface_G_SENSOR_INT" (rect 4 109 274 120)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 272 120)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 149 46 160)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 272 160)(line_width 1))
+	)
+	(port
+		(pt 0 88)
+		(output)
+		(text "accelerometer_external_interface_I2C_SCLK" (rect 0 0 185 12)(font "Arial" (font_size 8)))
+		(text "accelerometer_external_interface_I2C_SCLK" (rect 4 77 250 88)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 272 88)(line_width 1))
+	)
+	(port
+		(pt 0 104)
+		(output)
+		(text "accelerometer_external_interface_G_SENSOR_CS_N" (rect 0 0 225 12)(font "Arial" (font_size 8)))
+		(text "accelerometer_external_interface_G_SENSOR_CS_N" (rect 4 93 280 104)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 272 104)(line_width 1))
+	)
+	(port
+		(pt 0 72)
+		(bidir)
+		(text "accelerometer_external_interface_I2C_SDAT" (rect 0 0 186 12)(font "Arial" (font_size 8)))
+		(text "accelerometer_external_interface_I2C_SDAT" (rect 4 61 250 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 272 72)(line_width 1))
+	)
+	(drawing
+		(text "accelerometer_external_interface" (rect 78 43 348 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "I2C_SDAT" (rect 277 67 602 144)(font "Arial" (color 0 0 0)))
+		(text "I2C_SCLK" (rect 277 83 602 176)(font "Arial" (color 0 0 0)))
+		(text "G_SENSOR_CS_N" (rect 277 99 632 208)(font "Arial" (color 0 0 0)))
+		(text "G_SENSOR_INT" (rect 277 115 626 240)(font "Arial" (color 0 0 0)))
+		(text "clk" (rect 257 131 532 275)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 277 155 572 320)(font "Arial" (color 0 0 0)))
+		(text " unsaved " (rect 617 176 1288 362)(font "Arial" ))
+		(line (pt 272 32)(pt 384 32)(line_width 1))
+		(line (pt 384 32)(pt 384 176)(line_width 1))
+		(line (pt 272 176)(pt 384 176)(line_width 1))
+		(line (pt 272 32)(pt 272 176)(line_width 1))
+		(line (pt 273 52)(pt 273 124)(line_width 1))
+		(line (pt 274 52)(pt 274 124)(line_width 1))
+		(line (pt 273 140)(pt 273 164)(line_width 1))
+		(line (pt 274 140)(pt 274 164)(line_width 1))
+		(line (pt 0 0)(pt 656 0)(line_width 1))
+		(line (pt 656 0)(pt 656 192)(line_width 1))
+		(line (pt 0 192)(pt 656 192)(line_width 1))
+		(line (pt 0 0)(pt 0 192)(line_width 1))
+	)
+)

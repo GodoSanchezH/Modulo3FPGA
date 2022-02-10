@@ -1,0 +1,6 @@
+22:48:43 **** Clean-only build of configuration Nios II for project acl_bsp ****
+make clean 
+[BSP clean complete]
+
+22:48:57 Build Finished (took 14s.155ms)
+

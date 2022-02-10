@@ -1,0 +1,18 @@
+22:02:50 **** Incremental Build of configuration Nios II for project INTERRUPT ****
+make all 
+Info: Building ../INTERRUPT_bsp/
+E:/QUARTUSPRIME/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../INTERRUPT_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../INTERRUPT_bsp//HAL/inc -I../INTERRUPT_bsp/ -I../INTERRUPT_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking INTERRUPT.elf
+nios2-elf-g++  -T'../INTERRUPT_bsp//linker.x' -msys-crt0='../INTERRUPT_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../INTERRUPT_bsp/  -msmallc  -Wl,-Map=INTERRUPT.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o INTERRUPT.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert INTERRUPT.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x21050 --timestamp 1644458277 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name unsaved --quartus_project_dir "E:/github/Modulo3FPGA/Clase7/Interrupciones" --jdi ../..//output_files/Interrupciones.jdi --sopcinfo E:/github/Modulo3FPGA/Clase7/Interrupciones/software/INTERRUPT_bsp/../../unsaved.sopcinfo
+Info: (INTERRUPT.elf) 16 KBytes program size (code + initialized data).
+Info:                 18 KBytes free for stack + heap.
+Info: Creating INTERRUPT.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source INTERRUPT.elf >INTERRUPT.objdump
+[INTERRUPT build complete]
+
+22:03:06 Build Finished (took 15s.839ms)
+

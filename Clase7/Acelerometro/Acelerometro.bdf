@@ -1,0 +1,187 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect -280 144 72 160)
+	(text "INPUT" (rect 309 0 337 10)(font "Arial" (font_size 6)))
+	(text "accelerometer_external_interface_G_SENSOR_INT" (rect 5 0 258 12)(font "Arial" ))
+	(pt 352 8)
+	(drawing
+		(line (pt 268 12)(pt 293 12))
+		(line (pt 268 4)(pt 293 4))
+		(line (pt 297 8)(pt 352 8))
+		(line (pt 268 12)(pt 268 4))
+		(line (pt 293 4)(pt 297 8))
+		(line (pt 293 12)(pt 297 8))
+	)
+	(text "VCC" (rect 312 7 332 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -96 184 72 200)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "clk_clk" (rect 5 0 39 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect -248 112 72 128)
+	(text "OUTPUT" (rect 281 6 319 16)(font "Arial" (font_size 6)))
+	(text "accelerometer_external_interface_I2C_SCLK" (rect 5 4 226 16)(font "Arial" ))
+	(pt 320 8)
+	(drawing
+		(line (pt 320 8)(pt 268 8))
+		(line (pt 268 12)(pt 242 12))
+		(line (pt 268 4)(pt 242 4))
+		(line (pt 268 4)(pt 268 12))
+		(line (pt 242 12)(pt 238 8))
+		(line (pt 238 8)(pt 242 4))
+		(line (pt 242 4)(pt 238 8))
+	)
+	(rotate180)
+)
+(pin
+	(output)
+	(rect -288 128 72 144)
+	(text "OUTPUT" (rect 321 6 359 16)(font "Arial" (font_size 6)))
+	(text "accelerometer_external_interface_G_SENSOR_CS_N" (rect 5 4 270 16)(font "Arial" ))
+	(pt 360 8)
+	(drawing
+		(line (pt 360 8)(pt 308 8))
+		(line (pt 308 12)(pt 282 12))
+		(line (pt 308 4)(pt 282 4))
+		(line (pt 308 4)(pt 308 12))
+		(line (pt 282 12)(pt 278 8))
+		(line (pt 278 8)(pt 282 4))
+		(line (pt 282 4)(pt 278 8))
+	)
+	(rotate180)
+)
+(pin
+	(bidir)
+	(rect -248 96 72 112)
+	(text "BIDIR" (rect 295 6 319 16)(font "Arial" (font_size 6)))
+	(text "accelerometer_external_interface_I2C_SDAT" (rect 5 4 226 16)(font "Arial" ))
+	(pt 320 8)
+	(drawing
+		(line (pt 264 12)(pt 242 12))
+		(line (pt 320 8)(pt 268 8))
+		(line (pt 264 4)(pt 242 4))
+		(line (pt 242 12)(pt 238 8))
+		(line (pt 242 4)(pt 238 8))
+		(line (pt 264 12)(pt 268 8))
+		(line (pt 268 8)(pt 264 4))
+	)
+	(rotate180)
+	(text "VCC" (rect 296 -1 316 9)(font "Arial" (font_size 6)))
+)
+(symbol
+	(rect 192 32 848 224)
+	(text "unsaved" (rect 305 -1 360 15)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 176 25 188)(font "Arial" ))
+	(port
+		(pt 0 120)
+		(input)
+		(text "accelerometer_external_interface_G_SENSOR_INT" (rect 0 0 290 14)(font "Arial" (font_size 8)))
+		(text "accelerometer_external_interface_G_SENSOR_INT" (rect 4 109 294 123)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 272 120))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "clk_clk" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 149 41 163)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 272 160))
+	)
+	(port
+		(pt 0 88)
+		(output)
+		(text "accelerometer_external_interface_I2C_SCLK" (rect 0 0 256 14)(font "Arial" (font_size 8)))
+		(text "accelerometer_external_interface_I2C_SCLK" (rect 4 77 260 91)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 272 88))
+	)
+	(port
+		(pt 0 104)
+		(output)
+		(text "accelerometer_external_interface_G_SENSOR_CS_N" (rect 0 0 304 14)(font "Arial" (font_size 8)))
+		(text "accelerometer_external_interface_G_SENSOR_CS_N" (rect 4 93 308 107)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 272 104))
+	)
+	(port
+		(pt 0 72)
+		(bidir)
+		(text "accelerometer_external_interface_I2C_SDAT" (rect 0 0 257 14)(font "Arial" (font_size 8)))
+		(text "accelerometer_external_interface_I2C_SDAT" (rect 4 61 261 75)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 272 72))
+	)
+	(drawing
+		(text "accelerometer_external_interface" (rect 78 43 293 58)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "I2C_SDAT" (rect 277 67 328 79)(font "Arial" (color 0 0 0)))
+		(text "I2C_SCLK" (rect 277 83 328 95)(font "Arial" (color 0 0 0)))
+		(text "G_SENSOR_CS_N" (rect 277 99 372 111)(font "Arial" (color 0 0 0)))
+		(text "G_SENSOR_INT" (rect 277 115 360 127)(font "Arial" (color 0 0 0)))
+		(text "clk" (rect 257 131 274 146)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 277 155 291 167)(font "Arial" (color 0 0 0)))
+		(text " unsaved " (rect 617 176 666 188)(font "Arial" ))
+		(line (pt 272 32)(pt 384 32))
+		(line (pt 384 32)(pt 384 176))
+		(line (pt 272 176)(pt 384 176))
+		(line (pt 272 32)(pt 272 176))
+		(line (pt 273 52)(pt 273 124))
+		(line (pt 274 52)(pt 274 124))
+		(line (pt 273 140)(pt 273 164))
+		(line (pt 274 140)(pt 274 164))
+		(line (pt 0 0)(pt 656 0))
+		(line (pt 656 0)(pt 656 192))
+		(line (pt 0 192)(pt 656 192))
+		(line (pt 0 0)(pt 0 192))
+	)
+)
+(connector
+	(pt 72 104)
+	(pt 192 104)
+)
+(connector
+	(pt 72 120)
+	(pt 192 120)
+)
+(connector
+	(pt 72 136)
+	(pt 192 136)
+)
+(connector
+	(pt 72 152)
+	(pt 192 152)
+)
+(connector
+	(pt 72 192)
+	(pt 192 192)
+)

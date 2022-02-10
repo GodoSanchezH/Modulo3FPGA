@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="143" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Processors and Peripherals,Library/University Program/Generic IO,Library/Basic Functions/Simulation; Debug and Verification,Project,Library/Basic Functions,Library,Library/Processors and Peripherals/Hard Processor Components,Library/University Program,Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Library/Tri-State Components,Library/DSP,Library/Processors and Peripherals/Peripherals,Library/Low Power,Library/Interface Protocols,Library/Qsys Interconnect" />
+ <window width="1100" height="555" x="-51" y="245" />
+ <generation synthesis="VHDL" />
+</preferences>

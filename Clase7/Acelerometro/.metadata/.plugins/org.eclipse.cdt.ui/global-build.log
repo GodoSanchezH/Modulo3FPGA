@@ -1,0 +1,50 @@
+23:09:11 **** Incremental Build of configuration Nios II for project acl ****
+make all 
+Info: Building ../acl_bsp/
+E:/QUARTUSPRIME/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../acl_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../acl_bsp//HAL/inc -I../acl_bsp/ -I../acl_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:29:1: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+ if (acc_dev = NULL) {
+ ^
+Info: Linking acl.elf
+nios2-elf-g++  -T'../acl_bsp//linker.x' -msys-crt0='../acl_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../acl_bsp/  -msmallc  -Wl,-Map=acl.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o acl.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert acl.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x21010 --timestamp 1644463407 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name unsaved --quartus_project_dir "E:/github/Modulo3FPGA/Clase7/Acelerometro" --jdi ../..//output_files/Acelerometro.jdi --sopcinfo E:/github/Modulo3FPGA/Clase7/Acelerometro/software/acl_bsp/../../unsaved.sopcinfo
+Info: (acl.elf) 17 KBytes program size (code + initialized data).
+Info:           17 KBytes free for stack + heap.
+Info: Creating acl.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source acl.elf >acl.objdump
+[acl build complete]
+23:10:00 **** Build of configuration Nios II for project acl ****
+make all 
+Info: Building ../acl_bsp/
+E:/QUARTUSPRIME/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../acl_bsp/
+[BSP build complete]
+[acl build complete]
+23:11:53 **** Incremental Build of configuration Nios II for project acl ****
+make all 
+Info: Building ../acl_bsp/
+E:/QUARTUSPRIME/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../acl_bsp/
+[BSP build complete]
+[acl build complete]
+23:13:14 **** Incremental Build of configuration Nios II for project acl ****
+make all 
+Info: Building ../acl_bsp/
+E:/QUARTUSPRIME/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../acl_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../acl_bsp//HAL/inc -I../acl_bsp/ -I../acl_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_INSTRUCTION_EMULATION -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:29:1: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+ if (acc_dev = NULL) {
+ ^
+Info: Linking acl.elf
+nios2-elf-g++  -T'../acl_bsp//linker.x' -msys-crt0='../acl_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../acl_bsp/  -msmallc  -Wl,-Map=acl.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o acl.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert acl.elf --thread_model hal --cpu_name nios2 --qsys true --simulation_enabled false --id 0 --sidp 0x21010 --timestamp 1644463407 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name unsaved --quartus_project_dir "E:/github/Modulo3FPGA/Clase7/Acelerometro" --jdi ../..//output_files/Acelerometro.jdi --sopcinfo E:/github/Modulo3FPGA/Clase7/Acelerometro/software/acl_bsp/../../unsaved.sopcinfo
+Info: (acl.elf) 17 KBytes program size (code + initialized data).
+Info:           17 KBytes free for stack + heap.
+Info: Creating acl.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source acl.elf >acl.objdump
+[acl build complete]

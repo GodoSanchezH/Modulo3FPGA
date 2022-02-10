@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Wed Feb 09 22:49:37 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Acelerometro
+Top-level Entity Name : Acelerometro
+Family : MAX 10
+Total logic elements : 1,794
+    Total combinational functions : 1,611
+    Dedicated logic registers : 957
+Total registers : 957
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 331,264
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
